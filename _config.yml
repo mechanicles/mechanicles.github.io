@@ -9,10 +9,10 @@
 title: Santosh Wadghule
 email: santosh.wadghule@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A freelancer based out of Pune. He has over five years of professional
+  A freelancer based out of Pune. He has over six years of professional
   programming experience. Loves Vim and open source world.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mechanicles.com/blog" # the base hostname & protocol for your site
+url: "http://blog.mechanicles.com/" # the base hostname & protocol for your site
 twitter_username: mechanicles
 github_username:  mechanicles
 
