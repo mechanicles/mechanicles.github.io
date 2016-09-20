@@ -272,7 +272,7 @@ message, then we can handle our logic and show the match data to users in
 the proper format.
 
 This is all about how we can decouple the app into separate components using
-microservices which have solved above 2 problems.
+microservices which help to solve above two problems.
 
 Happy Hacking :)
 
