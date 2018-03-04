@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Gotchas with Rails System Tests"
+title:  "Gotchas with Rails System Testing"
 ---
 
-I’m not so familiar with Rails system tests, but recently we started to write system tests in our app. We do write model
+I’m not so familiar with Rails system testing, but recently we started to write system tests in our app. We do write model
 tests and controller tests which cover most of the business logic. Our app started growing a lot, and we found 
 in some pages there were silly mistakes we had in our app which were related to JavaScript/Ajax, and which indirectly 
 affected some of our users.
@@ -109,3 +109,4 @@ issues. System tests speed also got improved.
 Please let me know if you have good ideas for these fixes. It would be helpful for our project as well as for
 Rails communities.
 
+Happy Hacking :)

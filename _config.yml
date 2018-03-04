@@ -10,7 +10,7 @@ title: Santosh Wadghule
 email: santosh.wadghule@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A freelancer based out of Pune. He has almost eight years of professional
-  programming experience. Loves Ruby, Vim and open source world.
+  programming experience. Loves Ruby, Vim, and open source world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.mechanicles.com/" # the base hostname & protocol for your site
 twitter_username: mechanicles
