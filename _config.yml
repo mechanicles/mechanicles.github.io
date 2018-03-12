@@ -20,3 +20,6 @@ google_analytics: UA-84554051-1
 
 # Build settings
 markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
