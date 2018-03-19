@@ -85,3 +85,5 @@ puts task.attributes.slice("subject", "completed").to_yaml
 
 I find this helpful when we create significant active record objects into the database from
 parsing our user’s email data and generating fixtures manually for them in tests is cumbersome.
+
+Simple but useful :rocket:
