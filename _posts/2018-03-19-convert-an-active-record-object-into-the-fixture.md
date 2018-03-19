@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Convert ActiveRecord object into fixture record"
+title:  "Convert an ActiveRecord object into the fixture"
 ---
 
-Sometimes in your development environment you might have created a valid active
-record object which you want to use it as a fixture in your test so
-you don't need to waste your time from creating fixture manually.
+Sometimes in your development environment, you might have created a valid active record
+object which you want to use as a fixture data in your test, so you don’t want to waste
+your time from building fixture manually.
 
-To do this, you just need to open your Rails console and fetch that object:
+To do this, you just need to open your Rails console and fetch that active
+record object:
 
 ```ruby
 task = Task.last
@@ -31,7 +32,7 @@ task = Task.last
 # }
 ```
 
-Then convert that object into fixture record list like this,
+Then convert that object into fixture data like this,
 
 ```ruby
 puts task.attributes.to_yaml
@@ -68,12 +69,10 @@ puts task.attributes.to_yaml
 
 ```
 
-Then copy these values, paste in your fixture file, and give a proper name to
-the fixture. Handle primary keys, foreign keys, date columns and remove unnecessary records as
-per your requirement.
+Then copy this data, paste in your fixture file, and give a proper name to the fixture.
+Handle primary keys, foreign keys, date columns and remove additional records as per your requirement.
 
-Also, if you want to select specific attributes from the object, then use it like
-this,
+Also, if you want to select specific attributes from the object, then use it like this,
 
 ```ruby
 puts task.attributes.slice("subject", "completed").to_yaml
@@ -84,7 +83,5 @@ puts task.attributes.slice("subject", "completed").to_yaml
 # nil
 ```
 
-I find this helpful when we create big active record objects from parsing our
-user email data in our database and creating fixture for it manually is
-cumbersome.
-
+I find this helpful when we create significant active record objects into the database from
+parsing our user’s email data and generating fixtures manually for them in tests is cumbersome.
