@@ -4,8 +4,8 @@ title:  "Microservices using Rails, HTTP & RabbitMQ"
 ---
 
 Imagine that, we have built one monolithic app **Cricket Live Score** where an
-admin adds the live match scores into the database and users use this app to get
-to know current score about the live match. Match like **India** v **Pakistan**
+admin adds the live match scores into the database, and users use this app to get
+to know the current score about the live match. Match like **India** v **Pakistan**
 is very popular and it tends to have lots of traffic. Sometimes app goes down
 because it can't handle such heavy traffic.
 
@@ -14,20 +14,21 @@ If you see here, there are two problems,
 
 2. To get the current score, the user hits the page several times which causes
 lots of incoming requests to the server and due to this app server goes down.
-1. For a live match, if the server is down due to heavy load then admin is not
+1. For a live match, if the server is down due to heavy load, then admin is not
 able to do anything. He sits quietly.
 
-It's not a good reason for admin for sitting quietly because of heavy load on the
-server. We have to handle admin part in a way that there is no effect of users
-activities on it. There should not be a relation between them. Getting current
-score by reloading the page is also not a good way if the app has such a traffic.
+It’s not a good reason for admin for sitting quietly because of heavy load on
+the server. We have to handle admin part in a way that there is no effect of
+users activities on it. There should not be a relation between them. Getting
+current score by reloading the page is also not a right way if the app has such
+traffic.
 
 ### Solution:
-There are lots of solutions out there to handle this situation. But let's see how
-microservices sometimes play very important role in handling this situation.
+There are lots of solutions out there to handle this situation. But let’s see how
+microservices sometimes play a crucial role in managing this situation.
 
 Based on above two problems, let's create two microservices (i.e. two Rails apps).
-In one microservice, we are going to handle only admin part (i.e backend) and in
+In one microservice, we are going to handle only admin part (i.e. backend), and in
 another microservice, we will handle user part (i.e. frontend). Building them
 separately, we can scale them independently like handling more effective caching
 in frontend microservice.
@@ -37,7 +38,7 @@ too like Sinatra instead of Rails.*
 
 ### Assumption:
 In backend microservice, assume that we have added all required model, controller and
-views files with code for match resource i.e all required business logic.
+views files with code for match resource i.e. all the necessary business logic.
 Admin user will come, add a new match and update related scores for the live
 match. In frontend microservice, assume that we also have added a required
 controller & views so that user can see the list of matches and can select any
@@ -46,10 +47,10 @@ one of them to see live scores of the match.
 ### Communication:
 To speak within these microservices, we need a communication layer. For that,
 either we can use **HTTP** or **RabbitMQ** (AMQP Protocol). But in this situation,
-we are going to use both. Why both? because, in frontend microservice, we need
+we are going to use both. Why both? Because, in frontend microservice, we need
 data for matches and we will fetch it from backend microservice using **HTTP**
-request. In backend service, when admin updates any match's live score we also
-need to update our users of frontend microservice in realtime. So users don't
+request. In backend service, when admin updates any match's live score, we also
+need to update our users of frontend microservice in real-time. So users don't
 need to refresh the page to get the current score of the match. For that,
 we are going to use **RabbitMQ**.
 
@@ -66,7 +67,7 @@ RabbitMQ Web-Stomp plugin takes the [STOMP](http://stomp.github.io/) protocol an
 exposes it using either plain WebSockets or
 [a SockJS server](https://github.com/sockjs/sockjs-client).
 
-Using these tools, we will push messages in realtime from RabbitMQ to
+Using these tools, we will push messages in real-time from RabbitMQ to
 the web clients.
 
 ### Backend Microservice setup:
@@ -85,7 +86,7 @@ hitting this URL `http://127.0.0.1:15674/stomp`.
 
 When admin updates the match score, we want to publish that score on the frontend
 microservice.
-First create a file named `match_score_service.rb` under `lib` directory.
+First, create a file named `match_score_service.rb` under `lib` directory.
 Make sure you autoload that file.
 
 {% highlight ruby %}
@@ -130,9 +131,9 @@ end
 {% endhighlight %}
 
 Using Bunny Ruby client, we connect to RabbitMQ server on local machine. By
-adding proper queue name and other settings we send the match data to RabbitMQ
-server. To know more about these settings/configurations I would suggest following
-this [turorial](https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html) on
+adding proper queue name and other settings, we send the match data to RabbitMQ
+server. To know more about these settings/configurations, I would suggest following
+this [tutorial](https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html) on
 RabbitMQ site.
 
 Change your `matches_controller.rb` like this,
@@ -204,13 +205,13 @@ class MatchesController < ApplicationController
 end
 {% endhighlight %}
 
-In `index` action of `MatchesController`, we fetch matches list like `@live_matches`
+In `index` action of `MatchesController`, we fetch matches list like `@live_matches`,
 and `@previous_matches` from backend microservice and then we show them to users.
-The user will pick any live match to get the realtime match updates. In `show`
-action we fetch match's recent data then the user will start getting realtime
+The user will pick any live match to get the real-time match updates. In `show`
+action we fetch match's recent data then the user will start getting real-time
 scores automatically if the match is live.
 
-To get the realtime updates in `show.html.erb` page, we need to make a
+To get the real-time updates in `show.html.erb` page, we need to make a
 connection to RabbitMQ server. Let's do it.
 
 ### Frontend Microservice setup:
@@ -242,7 +243,7 @@ it, please add code like this,
       var matchID   = $("[data-info~=match-title]").data('match-id');
       client.subscribe("/exchange/match_scores/match-" + matchID, function(data) {
         var match = JSON.parse(data.body);
-        // Handle your code here & display realtime match score
+        // Handle your code here & display real-time match score
         ...
         ...
         ...
@@ -266,13 +267,13 @@ mandatory parameters. We also have passed callbacks so that we can fetch
 the message from RabbitMQ server. You can read more about this flow in this
 [article](http://jmesnil.net/stomp-websocket/doc/).
 
-In `onConnect` method we subscribe to queue and through which we get the
-realtime message from RabbitMQ server if there is any. Once we get the match data
+In `onConnect` method, we subscribe to queue and through which we get the
+real-time message from RabbitMQ server if there is any. Once we get the match data
 message, then we can handle our logic and show the match data to users in
 the proper format.
 
-This is all about how we can decouple the app into separate components using
-microservices which help to solve above two problems.
+This blog post is all about how we can decouple the app into separate components
+using microservices which help to solve above two problems.
 
 Happy Hacking :)
 
