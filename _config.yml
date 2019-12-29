@@ -8,13 +8,26 @@
 # Site settings
 title: Santosh Wadghule
 email: santosh.wadghule@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  A freelancer based out of Pune. He has almost eight years of professional
-  programming experience. Loves Ruby, Vim, and open source world.
+description: >
+  Ruby, Ruby on Rails, JavaScript fullstack developer, DevOps and Vim lover.
+author:
+  about_me: >
+    A Ruby on Rails consultant based out of Pune. Loves Ruby, Vim, and open 
+    source world.
+  hire_me: >
+    Hire me for Ruby on Rails specific problems, architecture, application design, 
+    optimizations, code reviews, performance, team mentoring, and rescue missions.
+  twitter: mechanicles
+  github: mechanicles
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.mechanicles.com/" # the base hostname & protocol for your site
 twitter_username: mechanicles
 github_username:  mechanicles
+
+twitter:
+  card: summary
+  username: mechanicles
 
 google_analytics: UA-84554051-1
 
@@ -24,3 +37,4 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
   - jemoji
+  - jekyll-octicons
