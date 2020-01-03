@@ -3,6 +3,8 @@ layout: post
 title: "Primary or default flag to the Rails models"
 ---
 
+**Update:** Please check updated changes <a href="https://github.com/mechanicles/set_as_primary/blob/master/CHANGELOG.md" target="_blank">here</a>.
+
 In some client projects, I found that there was one common requirement: setting a
 primary or default flag for models like EmailAddress, PhoneNumber, Address, etc.
 which belong to User/Person model or polymorphic model. 
