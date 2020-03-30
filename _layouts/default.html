@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-  {% seo %}
 
   <body>
-
     {% include header.html %}
 
     <div class="page-content">
@@ -16,6 +13,8 @@
 
     {% include footer.html %}
 
+    {% if jekyll.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
   </body>
-
 </html>

@@ -18,7 +18,7 @@ author:
   github: mechanicles
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.mechanicles.com/" # the base hostname & protocol for your site
+url: "https://blog.mechanicles.com/" # the base hostname & protocol for your site
 twitter_username: mechanicles
 github_username:  mechanicles
 
