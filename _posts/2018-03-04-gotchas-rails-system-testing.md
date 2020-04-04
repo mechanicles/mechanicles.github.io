@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  "Gotchas with Rails System Testing"
+tags:
+- rails
+- system-testing
 ---
 
 I’m not so familiar with Rails system testing, but recently we started to write system tests in our app. We do write model

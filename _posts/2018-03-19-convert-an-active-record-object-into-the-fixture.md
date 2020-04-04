@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  "Convert an ActiveRecord object into the fixture"
+tags:
+- activerecord
+- fixture
 ---
 
 Sometimes in your development environment, you might have created a valid active record
