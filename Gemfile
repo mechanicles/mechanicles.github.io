@@ -6,6 +6,7 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll', '>= 3.6.3'
 gem 'jekyll-octicons'
 gem 'jekyll-seo-tag'
+gem 'jekyll-sitemap'
 gem 'jemoji'
 gem 'json', github: 'flori/json', branch: 'v1.8'
 gem 'nokogiri', '>= 1.10.4'
