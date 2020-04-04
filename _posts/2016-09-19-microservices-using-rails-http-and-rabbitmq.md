@@ -1,6 +1,10 @@
 ---
 layout: post
 title:  "Microservices using Rails, HTTP & RabbitMQ"
+tags:
+- microservices
+- rails
+- rabbitmq
 ---
 
 Imagine that, we have built one monolithic app **Cricket Live Score** where an

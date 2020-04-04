@@ -6,6 +6,10 @@
           <li>{{ site.title }}</li>
           <li>{% include icon-email.html %} </li>
         </ul>
+        The source code of the site is freely available at 
+        <a href="https://github.com/mechanicles/mechanicles.github.io" target="_blank">
+          GitHub
+        </a>.
       </div>
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
@@ -13,15 +17,19 @@
             {% include icon-rubygems.html %}
           </li>
           {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
+            <li>
+              {% include icon-github.html username=site.github_username %}
+            </li>
           {% endif %}
-
+          {% if site.linkedin_username %}
+            <li>
+              {% include icon-linkedin.html username=site.linkedin_username %}
+            </li>
+          {% endif %}
           {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
+            <li>
+              {% include icon-twitter.html username=site.twitter_username %}
+            </li>
           {% endif %}
         </ul>
       </div>

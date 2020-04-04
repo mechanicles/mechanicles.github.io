@@ -259,6 +259,7 @@ DEPENDENCIES
   jekyll (>= 3.6.3)
   jekyll-octicons
   jekyll-seo-tag
+  jekyll-sitemap
   jemoji
   json!
   nokogiri (>= 1.10.4)

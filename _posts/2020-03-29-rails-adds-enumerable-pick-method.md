@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Rails adds Enumerable#pick method"
+tags:
+- rails
 ---
 
 Rails 6 [adds](https://github.com/rails/rails/pull/38760) a new method 

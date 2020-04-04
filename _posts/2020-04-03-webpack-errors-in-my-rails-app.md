@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Webpack errors in my Rails app"
+tags:
+- webpack
+- rails
 ---
 
 While spinning up my client's Rails project, I was getting a weird webpack error:
