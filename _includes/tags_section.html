@@ -1,0 +1,10 @@
+{% if page.tags %}
+  <div style="margin-bottom:30px">
+    <span class="icon">
+      {% octicon tag %}
+    </span>
+    {% for tag in page.tags %}
+      <code class="highlighter-rouge"><a class="post-tag" href="/tags/#{{ tag | slugify }}">{{ tag }}</a></code>
+    {% endfor %}
+  </div>
+{% endif %}
