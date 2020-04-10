@@ -1,4 +1,5 @@
-<a href="https://github.com/{{ include.username }}" target="_blank">
-  <span class="icon icon--github">{% include icon-github.svg %}</span>
-  <span class="username">{{ include.username }}</span>
+<a href="https://github.com/{{ include.username | cgi_escape | escape }}"
+   title="{{include.username | escape}}" target="_blank">
+    <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+    <span class="username">{{ include.username }}</span>
 </a>

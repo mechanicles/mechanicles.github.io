@@ -15,8 +15,8 @@ You can find my Rails contributions 💎 [here](http://contributors.rubyonrails.
 I am also the author of Ruby gems [RubySimpleSearch](https://github.com/mechanicles/ruby_simple_search)
 and [SetAsPrimary](https://github.com/mechanicles/set_as_primary).
 
-I had written a simple jQuery plugin [labelize-field](https://github.com/mechanicles/labelize-field)
-for in-field-label, i.e., the placeholder for old browsers.
+I wrote a simple jQuery plugin [labelize-field](https://github.com/mechanicles/labelize-field)
+for in-field-label (the placeholder for old browsers).
 
 You can find my more work on [GitHub](https://github.com/mechanicles).
 
@@ -26,5 +26,5 @@ Hire me for Ruby on Rails specific problems, architecture, application design,
 optimizations, code reviews, performance, team mentoring, and rescue missions.
 
 Follow me on:
-{% include icon-github.html username="mechanicles" %} /
+{% include icon-github.html username="mechanicles" %} | 
 {% include icon-twitter.html username="mechanicles" %}

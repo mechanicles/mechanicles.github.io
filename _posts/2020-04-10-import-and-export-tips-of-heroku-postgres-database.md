@@ -13,6 +13,7 @@ here I am writing down that flow for me. I hope it might be useful for other
 Heroku users too.
 
 ### 1. Import database from Heroku on the local machine
+
 1 - First, take database backup on the Heroku:
 
 ```
@@ -38,6 +39,7 @@ based on your database settings.
 
 
 ### 2. Export local machine's database on Heroku
+
 There are two steps we can use for exporting the database to the Heroku server.
 
 1. Creating a dump file from the local machine and uploading it to the Heroku server
@@ -45,6 +47,7 @@ There are two steps we can use for exporting the database to the Heroku server.
 
 
 #### Step 1:
+
 Create a local dump file from using `pg_dump` command:
 
 ```
@@ -79,6 +82,7 @@ heroku pg:reset -a your-app-name
 ```
 
 ### 4. Reset primary key sequence
+
 After exporting database on Heroku server, you might need to reset 
 sequence(auto-increment) on primary key column (or similar column), to solve 
 it, you can follow this [blog post](http://blog.joncairns.com/2013/01/reset-postgresql-auto-increment-value-in-rails/).
