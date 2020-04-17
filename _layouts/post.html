@@ -16,7 +16,7 @@ layout: default
         <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
           {{ mdate | date: date_format }}
         </time>
-      {%- endif -%} |
+      {%- endif -%} • 
       {%- include read_time.html -%}
       {%- if page.author -%}
         • {% for author in page.author %}

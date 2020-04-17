@@ -33,9 +33,7 @@ layout: default
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
-          {% if post.excerpt != post.content %}
-            <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
-          {% endif %}
+          <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
         {%- endif -%}
       </li>
       {%- endfor -%}
@@ -60,6 +58,4 @@ layout: default
     {%- endif %}
 
   {%- endif -%}
-
 </div>
-
