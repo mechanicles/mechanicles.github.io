@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setting up Elasticsearch, Chrome, Chromedriver on Drone CI"
+title: "Setting up Elasticsearch, Chrome, and Chromedriver on Drone CI"
 tags:
 - CI
 - elasticsearch
