@@ -10,12 +10,15 @@ tags:
 - TIL
 ---
 
-Our search specs are now dependent on Elasticsearch and to run
-feature/system specs, we need Chrome and Chromedriver software packages in
-our system. Recently, I was working on setting up Elasticsearch, Chrome, and
-Chromedriver software packages on [Drone CI](https://drone.io/). 
+Recently, we started using Elasticsearch to make locations search fast.
 
-Let's discuss how to set up those software packages and make them ready to serve.
+Now our search specs are dependent on Elasticsearch. We also added
+feature/system specs for it. To run feature/system specs, we need Chrome and
+Chromedriver software packages in our system.
+
+I was working on setting up Elasticsearch, Chrome, and Chromedriver
+software packages on [Drone CI](https://drone.io/). Let's discuss how to set up
+those software packages and make them ready to serve.
 
 Initially, I went through Drone docs and was able to set up Elasticsearch
 quickly using this
@@ -91,7 +94,7 @@ trigger:
 
 After these changes, our CI build passed successfully! 🚀
 
-Found that chrome installation takes a bit more time. But not sure if Chrome
+Found that Chrome installation takes a bit more time. But not sure if Chrome
 docker image solves this issue, if it does, I will recommend using that one.
 
 It would be good if anyone knows useful references for installing these software
