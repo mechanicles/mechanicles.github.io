@@ -8,8 +8,8 @@ tags:
 **Update:** Please check updated changes <a href="https://github.com/mechanicles/set_as_primary/blob/master/CHANGELOG.md" target="_blank">here</a>.
 
 In some client projects, I found that there was one common requirement: setting a
-primary or default flag for models like EmailAddress, PhoneNumber, Address, etc.
-which belong to User/Person model or polymorphic model. 
+primary or default boolean flag for models like EmailAddress, PhoneNumber, 
+Address, etc. which belong to User/Person model or polymorphic model. 
 
 I found that in those projects, I had added almost the same backend code
 which worked pretty good. I wanted to create a gem for this but didn't work on
