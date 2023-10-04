@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-gem 'ffi', '>= 1.9.24'
-gem 'github-pages', group: :jekyll_plugins
-gem 'jekyll', '>= 3.6.3'
-gem 'jekyll-octicons'
-gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
-gem 'jemoji'
-gem 'json', github: 'flori/json', branch: 'v1.8'
-gem 'nokogiri', '>= 1.10.4'
-gem 'rubyzip', '>= 1.2.2'
+gem 'ffi'
+gem 'jekyll'
+gem 'json', github: 'flori/json'
+gem 'nokogiri'
+gem 'rubyzip'
+
+group :jekyll_plugins do
+  gem 'github-pages'
+  gem 'jekyll-octicons'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
+  gem 'jemoji'
+end
