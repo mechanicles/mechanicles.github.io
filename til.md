@@ -14,4 +14,4 @@ generally faster than non-immediate objects.
 
 e.g. `true`, `false`, `nil`, `Fixnum`, `Symbol`
 
-These objcts are stored directly in `VALUE`
+These objects are stored directly in `VALUE`.
