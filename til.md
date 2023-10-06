@@ -1,6 +1,7 @@
 ---
 layout: page
 title: TIL
+page_main_title: Today I learned
 permalink: /til/
 ---
 
